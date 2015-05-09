@@ -4,5 +4,4 @@ class NetworksController < ApplicationController
 
   def create
   end
-
 end
