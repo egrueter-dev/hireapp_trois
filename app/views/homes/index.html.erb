@@ -1,7 +1,7 @@
 <div class="top-background">
   <div class="row">
     <div class="large-4 columns"> </div>
-    <div class="large-12 columns" align="center">Simple, powerful social recruiting </div>
+    <div class="large-12 columns" align="center"><h2>Simple, powerful social recruiting</h2></div>
     <div class="large-4 columns"> </div>
   </div>
   <div class="row">
@@ -12,7 +12,17 @@
   </div>
   <div class="row">
     <div class="large-2 columns"></div>
-    <div class="large-12 columns" align="center"><img src="http://placehold.it/350x65"></div>
+    <div class="large-12 columns" align="center">
+      <div class="betaform">
+        <%= form_for :betauser do |f| %>
+          <div class="row">
+          <div class="large-5 columns"> <%= f.text_field :name %> </div>
+          <div class="large-5 columns"> <%= f.text_field :email %> </div>
+          <div class="large-1 columns" style="float:left"> <%= f.submit %> </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
     <div class="large-2 columns"></div>
   </div>
 </div>
@@ -74,19 +84,29 @@
   </div>
 </div>
 <div class="bottom-cta">
-<div class="row" align="center">
-  <div class="large-2 columns"></div>
-  <div class="large-12 columns">Join Our Private Beta</div>
-  <div class="large-2 columns"></div>
-</div>
-<div class="row" align="center">
-  <div class="large-2 columns"></div>
-  <div class="large-12 columns">We're changing the way recruiters connect with the best talent. Join our beta, start driving revenue through social!</div>
-  <div class="large-2 columns"></div>
-</div>
-<div class="row" align="center">
-  <div class="large-2 columns"></div>
-  <div class="large-12 columns"></div>
-  <div class="large-2 columns"></div>
-</div>
+  <div class="row" align="center">
+    <div class="large-2 columns"></div>
+    <div class="large-12 columns">Join Our Private Beta</div>
+    <div class="large-2 columns"></div>
+  </div>
+  <div class="row" align="center">
+    <div class="large-2 columns"></div>
+    <div class="large-12 columns">We're changing the way recruiters connect with the best talent. Join our beta, start driving revenue through social!</div>
+    <div class="large-2 columns"></div>
+  </div>
+  <div class="row" align="center">
+    <div class="large-2 columns"></div>
+    <div class="large-12 columns">
+      <div class="betaform">
+        <%= form_for :betauser do |f| %>
+          <div class="row">
+          <div class="large-5 columns"> <%= f.text_field :name %> </div>
+          <div class="large-5 columns"> <%= f.text_field :email %> </div>
+          <div class="large-1 columns" style="float:left"> <%= f.submit %> </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+    <div class="large-2 columns"></div>
+  </div>
 </div>
