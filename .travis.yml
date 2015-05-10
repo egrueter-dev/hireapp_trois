@@ -1,0 +1,6 @@
+language: ruby
+rvm:
+  - 2.0.0  # replace this with the ruby version you are using in development
+before_script:
+  # stripe_analytics_test
+  - psql -c 'create database hireapp_test;' -U postgres
