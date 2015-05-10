@@ -14,10 +14,19 @@
 /* *= require foundation_and_overrides */
 
 @import "modules/top-section.scss";
-@Import "modules/variables.scss";
+@import "modules/variables.scss";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,800,700,300);
 
 .row-border {
   height: 10px;
   width: 100%;
   background: $border;
+}
+
+.row {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-weight: lighter;
 }
