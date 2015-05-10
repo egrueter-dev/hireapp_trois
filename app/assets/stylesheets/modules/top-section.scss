@@ -1,0 +1,20 @@
+@import "variables";
+
+.top-background {
+  background-image: image-url("background_2.png");
+  height: 400px;
+  color: $whitetext;
+  width: 100%;
+
+  .row {
+    padding-top: 30px;
+  }
+
+  h2 {
+    color: $whitetext;
+  }
+}
+
+.betaform {
+  width: 500px;
+}
