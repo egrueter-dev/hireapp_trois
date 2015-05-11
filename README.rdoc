@@ -2,12 +2,12 @@
 
 Hireapp is a social recruiting tool that's fun to use! 
 
-Just: 
+=== Just: 
 
-Connect your social accounts
-Post your job
-Set the re-post frequency
-Wait to receive inbound interest in your job listings! 
+- Connect your social accounts
+- Post your job
+- Set the re-post frequency
+- Wait to receive inbound interest in your job listings! 
 
-Best of all, its free! 
+- Best of all, its free! (for your first two jobs) ;) 
 
