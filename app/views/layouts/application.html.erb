@@ -19,8 +19,8 @@
         <%- if current_user -%>
           <li><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "button" %></li>
         <%- else -%>
-          <li><%= button_to 'Join', new_user_registration_path, class: "button" %></li>
-          <li><%= button_to 'Sign In', new_user_session_path, clas: "button" %></li>
+          <li><%= button_to 'Join', new_user_registration_path, method: :get,  class: "button" %></li>
+          <li><%= button_to 'Sign In', new_user_session_path, method: :get, class: "button" %></li>
         <%- end -%>
       </ul>
     </section>
