@@ -6,8 +6,9 @@
   </div>
   <div class="row">
     <div class="large-8 columns"></div>
-    <div class="large-12 columns" align="center">Discover high quality talent using your own social networks. Place
-      more cadidates faster and grow your pipeline with Hireapp.</div>
+    <div class="large-12 columns" align="center">
+      <p class="landing-content">Discover high quality talent using your own social networks. Place
+      more candidates faster and grow your pipeline with Hireapp.</p></div>
     <div class="large-8 columns"></div>
   </div>
   <div class="row">
@@ -16,9 +17,9 @@
       <div class="betaform">
         <%= form_for :betauser do |f| %>
           <div class="row">
-          <div class="large-5 columns"> <%= f.text_field :name %> </div>
-          <div class="large-5 columns"> <%= f.text_field :email %> </div>
-          <div class="large-1 columns" style="float:left"> <%= f.submit "Get Invited" %> </div>
+          <div class="large-5 columns"> <%= f.text_field :name, class: "textfield" %> </div>
+          <div class="large-5 columns"> <%= f.text_field :email, class: "textfield" %> </div>
+          <div class="large-1 columns" style="float:left"> <%= f.submit "Get Invited", class: "button" %> </div>
         </div>
       <% end %>
       </div>
@@ -48,21 +49,21 @@
           <h4>An Integrated Social Recruiting Platform</h4>
         </div>
         <div class="row-text">
-          <p>HireApp connects your social networks, job boards and applicant tracking system to your listings, unifying the job search and growing your pipeline.</p>
+          <p class="landing-content">HireApp connects your social networks, job boards and applicant tracking system to your listings, unifying the job search and growing your pipeline.</p>
         </div>
       </div>
     </div>
-    <div class="large-6 columns"><img src="http://placehold.it/200x200"></div>
+    <div class="large-6 columns"><%= image_tag("Social.png", alt: "Social Recruiting Platform") %></div>
   </div>
   <div class="row" align="center">
-    <div class="large-6 columns"><img src="http://placehold.it/200x200"></div>
+    <div class="large-6 columns"><%= image_tag("Hires.png", alt: "Find High Quality Candidates") %></div>
     <div class="large-6 columns">
       <div class="row-content" align="left">
         <div class="row-title">
           <h4>Find High Quality Candidates</h4>
         </div>
         <div class="row-text">
-          <p>
+          <p class="landing-content">
           Leverage your existing social media audience to find the best candidates for your listing. Source candidates quickly through the followers and connections you already have.
           </p>
         </div>
@@ -76,12 +77,12 @@
           <h4>Build Relationships Through Social Media</h4>
         </div>
         <div class="row-text">
-          <p>Top recruiters know there’s more to finding that perfect candidate than blasting out job notifications. HireApp gives you the power to nurture prospects and grow your contact list using your follower base.</p>
+          <p class="landing-content">Top recruiters know there’s more to finding that perfect candidate than blasting out job notifications. HireApp gives you the power to nurture prospects and grow your contact list using your follower base.</p>
           </p>
         </div>
       </div>
     </div>
-    <div class="large-6 columns"><img src="http://placehold.it/200x200"></div>
+    <div class="large-6 columns"><%= image_tag("Networks.png", alt: "Build Relationships Through Social Media") %></div>
   </div>
 </div>
 <div class="bottom-cta">
@@ -101,9 +102,9 @@
       <div class="betaform">
         <%= form_for :betauser do |f| %>
           <div class="row">
-          <div class="large-5 columns"> <%= f.text_field :name %> </div>
-          <div class="large-5 columns"> <%= f.text_field :email %> </div>
-          <div class="large-1 columns" style="float:left"> <%= f.submit %> </div>
+          <div class="large-5 columns"> <%= f.text_field :name, class: "textfield" %> </div>
+          <div class="large-5 columns"> <%= f.text_field :email, class: "textfield" %> </div>
+          <div class="large-1 columns" style="float:left"> <%= f.submit "Get Invited", class: "button" %> </div>
         </div>
       <% end %>
       </div>
