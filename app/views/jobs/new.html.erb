@@ -7,6 +7,9 @@
 Job Title:       <%= f.text_field :title %>
 Employment Type: <%= f.select :employment_type, options_for_select(@employment_type) %>
 Industry:        <%= f.select :industry, options_for_select(@industry) %>
+Location:        <%= f.text_field :location %>
+Salary:          <%= f.text_field :salary %>
+Description:     <%= f.text_area :description %>
                  <%= f.submit "Publish Job" %>
 <% end %>
 
