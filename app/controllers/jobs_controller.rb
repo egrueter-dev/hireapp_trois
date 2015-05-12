@@ -1,8 +1,12 @@
 class JobsController < ApplicationController
   def index
-    render template: "layouts/_internalnav.html.erb"
+  end
+
+  def new
+
   end
 
   def create
+
   end
 end

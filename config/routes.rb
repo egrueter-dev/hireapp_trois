@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :settings, only: [:index]
   resources :networks, only: [:index, :create]
   resources :hires, only: [:index, :create]
-  resources :jobs, only: [:index, :create]
+  resources :jobs, only: [:index, :create, :new]
 
   #jobs needs to be updated here..
   #/job/12321/promote must be available..
