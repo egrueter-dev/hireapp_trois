@@ -10,9 +10,11 @@ Rails.application.routes.draw do
   resources :jobs, only: [:index, :create]
   resources :dashboards, only: [:index, :create]
   resources :homes, only: [:index, :create]
+  resources :upgrades, only: [:index, :create, :new]
 
   get 'company/home', to: 'dashboards#index'
   get 'company/jobs', to: 'jobs#index'
   get 'settings/networks', to: 'networks#index'
   get 'settings/profile', to: 'profile#index'
+
 end
