@@ -3,7 +3,7 @@
 <h4> Add a Job <h4>
 <ul>
 
-<%= form_for :job do |f| %>
+  <%= form_for :job, url: { action: "create" } do |f| %>
 Job Title:       <%= f.text_field :title %>
 Employment Type: <%= f.select :employment_type, options_for_select(@employment_type) %>
 Industry:        <%= f.select :industry, options_for_select(@industry) %>

@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   get 'company/jobs', to: 'jobs#index'
   get 'settings/networks', to: 'networks#index'
   get 'settings/profile', to: 'profile#index'
+
+
 end
