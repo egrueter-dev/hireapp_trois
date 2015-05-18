@@ -3,6 +3,7 @@ class JobsController < ApplicationController
   end
 
   def show
+    @job = Job.find(job_show_params[:id].to_i)
   end
 
   def new
@@ -12,12 +13,15 @@ class JobsController < ApplicationController
 
   def create
     Job.create(job_create_params)
-    binding.pry
   end
 
   private
 
   def job_create_params
     params.require(:job).permit(:title, :employment_type, :industry, :location, :salary, :description)
+  end
+
+  def job_show_params
+    params.permit(:id)
   end
 end
