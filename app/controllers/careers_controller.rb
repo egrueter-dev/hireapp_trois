@@ -5,7 +5,6 @@ class CareersController < ApplicationController
     else
       @jobs = Job.last(5)
     end
-
     @industries = Job::INDUSTRY
   end
 

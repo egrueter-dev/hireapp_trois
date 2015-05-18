@@ -1,13 +1,16 @@
 <%= render "layouts/searchbar" %>
 <div class="suggested_jobs">
-  <% @jobs.each do |job| %>
+  <% if @jobs.empty? %>
+    <p> No results found! <p>
+  <% else %>
+    <% @jobs.each do |job| %>
     <div class= "job">
     <p> <%= job.title %> </p>
     <p> <%= job.salary %> </p>
   </div>
+  <% end %>
 <% end %>
 </div>
-
 <div class="industries">
   <% @industries.each do |industry| %>
     <div class= "industry">
