@@ -5,7 +5,8 @@ class CareersController < ApplicationController
   end
 
   def show
-    #dry this up by adding a sidebar..
+    #DRY this up by adding a sidebar..
+
     @industries = Job::INDUSTRY
     @jobs_by_industry = Job.where(industry: industry_params[:id])
   end

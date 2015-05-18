@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :careers, only: [:index, :show]
 
   #jobs needs to be updated here..
+
   #/job/12321/promote must be available..
 
   resources :dashboards, only: [:index, :create]
