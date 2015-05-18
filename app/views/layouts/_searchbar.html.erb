@@ -1,0 +1,18 @@
+<div class="application-nav">
+  <nav class="top-bar">
+    <section class="top-bar-section">
+      <ul class="left">
+        <%= form_tag( careers_path, :method => "get") do %>
+          <div class="input-append">
+          <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+          <button class="btn" type="submit"><i class="icon-search"></i></button>
+        </div>
+      <% end %>
+      </ul>
+      <ul class="right">
+        <li><%= link_to "Upgrade", upgrades_path %></li>
+      </section>
+    </nav>
+  </div>
+  <%= yield %>
+
