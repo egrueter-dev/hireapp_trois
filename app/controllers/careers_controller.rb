@@ -1,7 +1,7 @@
 class CareersController < ApplicationController
   def index
     if params[:title] || params[:location]
-      @jobs = Job.search(params[:title],params[:location])
+      @jobs = Job.search(params[:title], params[:location])
     else
       @jobs = Job.last(5)
     end
@@ -12,9 +12,6 @@ class CareersController < ApplicationController
     #DRY this up by adding a sidebar..
 
     @industries = Job::INDUSTRY
-
-    #sorted in the order they were added? May be a default
-
     @jobs_by_industry = Job.where(industry: industry_params[:id])
   end
 
