@@ -1,21 +1,14 @@
-<div class="application-nav">
-  <nav class="top-bar">
-    <section class="top-bar-section">
-      <ul class="left">
-      </ul>
-      <ul class="right">
-        <li><%= link_to "Upgrade", upgrades_path %></li>
-      </section>
-    </nav>
-  </div>
-<%= yield %>
-
+<%= render "layouts/searchbar" %>
 <div class="suggested_jobs">
-  <% @suggestions.each do |suggestion| %>
+  <% if @jobs.empty? %>
+    <p> No results found! <p>
+  <% else %>
+    <% @jobs.each do |job| %>
     <div class= "job">
-    <p> <%= suggestion.title %> </p>
-    <p> <%= suggestion.salary %> </p>
+    <p> <%= job.title %> </p>
+    <p> <%= job.salary %> </p>
   </div>
+  <% end %>
 <% end %>
 </div>
 <div class="industries">

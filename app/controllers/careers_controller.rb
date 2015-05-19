@@ -1,6 +1,10 @@
 class CareersController < ApplicationController
   def index
-    @suggestions = Job.last(5)
+    if params[:title] || params[:location]
+      @jobs = Job.search(params[:title], params[:location])
+    else
+      @jobs = Job.last(5)
+    end
     @industries = Job::INDUSTRY
   end
 
