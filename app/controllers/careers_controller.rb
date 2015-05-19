@@ -1,7 +1,7 @@
 class CareersController < ApplicationController
   def index
-    if params[:search]
-      @jobs = Job.search(params[:search]).order("created_at DESC")
+    if params[:title] || params[:location]
+      @jobs = Job.search(params[:title],params[:location])
     else
       @jobs = Job.last(5)
     end

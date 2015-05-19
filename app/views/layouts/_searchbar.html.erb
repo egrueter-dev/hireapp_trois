@@ -3,7 +3,8 @@
     <section class="top-bar-section">
       <ul class="left">
         <%= form_tag( careers_path, :method => "get") do %>
-          <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
+          <%= text_field_tag :title, params[:title], placeholder: "Search Jobs by Keyword" %>
+          <%= text_field_tag :location, params[:location], placeholder: "Search Jobs by Location" %>
         <button class="btn" type="submit"><i class="icon-search"></i></button>
       <% end %>
       </ul>
