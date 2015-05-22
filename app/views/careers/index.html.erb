@@ -7,10 +7,10 @@
     <div class="suggested_jobs">
       <% if @jobs.empty? %>
         <p> No results found! <p>
-    <% else %>
+      <% else %>
         <% @jobs.each do |job| %>
-        <div class= "job">
-        <p> <%= job.title %> </p>
+       <div class= "job">
+          <p><a href="/jobs/<%= job.id %>"><%= job.title %></a></p>
         <p> <%= job.salary %> </p>
         <p> <%= job.location %> </p>
         <p> <%= job.date_created %> </p>
@@ -23,9 +23,12 @@
     <p></p>
   </div>
 </div>
+</div>
 <div class="industries">
+  <p>This should be some kind of frontend styling</p>
   <% @industries.each do |industry| %>
     <div class= "industry">
+    <p> <a href="/<%= industry %>"><%= industry %></a></p>
   </div>
 <% end %>
 </div>

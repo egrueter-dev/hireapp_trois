@@ -1,21 +1,14 @@
 <%= render "layouts/searchbar" %>
 <div class="jobs">
   <p>"Jobs by Industry"<p>
+  <p>this should be careers/accounting with all jobs listed
+  for that job...<p>
   <% @jobs_by_industry.each do |job| %>
     <div class= "job">
     <p> <%= job.title %> </p>
     <p> <%= job.salary %> </p>
   </div>
 <% end %>
-</div>
-
-<div class="industries">
-  <p>This should be some kind of frontend styling</p>
-  <p>This needs to be put in a partial and cleaned up</p>
-  <% @industries.each do |industry| %>
-    <div class= "industry">
-    <p> <a href="/<%= industry %>"><%= industry %></a></p>
-  </div>
-<% end %>
+  <p> Use accordion to reveal all industries </p>
 </div>
 
