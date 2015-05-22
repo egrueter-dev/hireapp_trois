@@ -12,7 +12,9 @@ class JobsController < ApplicationController
   end
 
   def create
+    binding.pry
     Job.create(job_create_params)
+    # redirect_to
   end
 
   private
