@@ -19,6 +19,6 @@ class Job < ActiveRecord::Base
       @jobs = Job.title(args[0])
       @jobs = @jobs.location(args[1])
     end
-    @jobs
+    @jobs.where(open: true)
   end
 end
