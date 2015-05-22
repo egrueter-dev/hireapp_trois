@@ -1,18 +1,13 @@
 @import "variables";
 
-.title {
-    position: relative;
-    display: inline-block;
-    margin-left: 300px;
+input#title {
+  width: 180px;
 }
 
-.location {
-    position: absolute;
-    display: inline-block;
-    margin-left:40px;
+input#location {
+  width: 180px;
 }
 
 .btn {
- padding-right: 100px;
-
+// make the button look pretty!
 }
