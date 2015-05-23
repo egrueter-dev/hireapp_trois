@@ -1,14 +1,12 @@
 <%= render "layouts/searchbar" %>
 <div class="jobs">
   <p>"Jobs by Industry"<p>
-  <p>this should be careers/accounting with all jobs listed
-  for that industry...<p>
   <% @jobs_by_industry.each do |job| %>
-    <div class= "job">
-    <p> <%= job.title %> </p>
-    <p> <%= job.salary %> </p>
-  </div>
-<% end %>
-  <p> Use accordion to reveal all industries </p>
+    <%= job %>
+  <% end %>
 </div>
+
+
+
+
 
