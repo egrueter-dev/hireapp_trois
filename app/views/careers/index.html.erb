@@ -28,8 +28,15 @@
   <p>This should be some kind of frontend styling</p>
   <% @industries.each do |industry| %>
     <div class= "industry">
-      <p><a href="/<%= industry %>"><%= industry %></a></p>
+    <p><a href="/<%= industry %>"><%= industry %></a></p>
     </div>
 <% end %>
+</div>
+<div class="Locations">
+  <p>This should be some kind of frontend styling</p>
+  <% @jobs_by_location.each do |location| %>
+    <%= location.location %>
+    </div>
+  <% end %>
 </div>
 

@@ -6,6 +6,7 @@ class CareersController < ApplicationController
       @jobs = Job.last(5)
     end
     @industries = Job::INDUSTRY
+    @jobs_by_location = Job.select(:location).limit(5)
   end
 
   def show
