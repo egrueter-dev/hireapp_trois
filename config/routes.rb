@@ -10,12 +10,13 @@ Rails.application.routes.draw do
   resources :careers, only: [:index, :show]
 
   #jobs needs to be updated here..
-
   #/job/12321/promote must be available..
 
   resources :dashboards, only: [:index, :create]
   resources :homes, only: [:index, :create]
   resources :upgrades, only: [:index, :create, :new]
+
+  match "careers/location/:location" => "careers#location", via: "get"
 
   get 'company/home', to: 'dashboards#index'
   get 'company/jobs', to: 'jobs#index'
