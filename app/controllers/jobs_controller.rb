@@ -13,6 +13,7 @@ class JobsController < ApplicationController
 
   def create
     Job.create(job_create_params)
+    # redirect_to
   end
 
   private

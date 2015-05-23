@@ -1,1 +1,16 @@
-<%= @job %>
+<%= render "layouts/searchbar" %>
+<p>Style this...</p>
+<div class="job-desc">
+  <div class="row" align="center">
+    <div class="row">
+      <div class= "job title"><%= @job.title %></div>
+    </div>
+  </div>
+  <%= @job.location %>
+  <%= @job.employment_type %>
+  <%= @job.industry %>
+  <%= @job.salary %>
+  <%= @job.description %>
+  <%= @job.date_created %>
+  <p>"Job application function here"</p>
+</div>
