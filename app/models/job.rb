@@ -8,7 +8,7 @@ class Job < ActiveRecord::Base
   scope :location, -> (location) { where("location like ?", "%#{location}%") }
 
   def date_created
-    raw_date = self.created_at
+    raw_date = created_at
     raw_date.strftime("%B %-d, %Y")
   end
 
