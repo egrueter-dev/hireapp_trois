@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :settings, only: [:index]
   resources :networks, only: [:index, :create]
-  resources :hires, only: [:index, :create]
+  resources :hires, only: [:index, :create, :show]
   resources :jobs, only: [:index, :create, :new, :show]
   resources :careers, only: [:index, :show]
 

@@ -1,5 +1,6 @@
 class Job < ActiveRecord::Base
   belongs_to :user
+  has_many :applicants
 
   EMPLOYMENT_TYPE = ["Contract", "Full Time", "Contract to Hire", "Intern", "Part Time", "Temp"]
   INDUSTRY = ["Accounting", "Add The Rest On A Rainy Day"]
