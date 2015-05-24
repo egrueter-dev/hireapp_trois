@@ -5,5 +5,12 @@ class HiresController < ApplicationController
 
   def create
     binding.pry
+    Applicant.create(hire_create_params)
+  end
+
+  private
+
+  def hire_create_params
+    params.require(:applicant).permit(:name, :email, :phone, :job_id)
   end
 end
