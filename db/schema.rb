@@ -31,8 +31,6 @@ ActiveRecord::Schema.define(version: 20150523221134) do
 
   create_table "jobs", force: :cascade do |t|
     t.string   "title",                          null: false
-    :q
-    :q
     t.string   "employment_type",                null: false
     t.string   "industry",                       null: false
     t.string   "location",                       null: false
