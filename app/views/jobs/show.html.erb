@@ -32,7 +32,9 @@
     Name          <%= f.text_field :name %>
     Email         <%= f.text_field :email %>
     Phone         <%= f.text_field :phone %>
-    Hidden field: <%= f.hidden_field :job_id, value: @job.id %>
+     Hidden field: <%= f.hidden_field :job_id, value: @job.id %>
+
+
                   <%= f.submit "Apply!" %>
   <% end %>
 

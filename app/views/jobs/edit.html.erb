@@ -1,10 +1,9 @@
 <%= render "layouts/internalnav" %>
-<p> Internal only page for editing a job </p>
-<p> Create pre-populated form here </p>
-
+<h2> Edit Job: <%= @job.title %> </h2>
 
 <%= form_for @job do |f| %>
-  Job Title:       <%= f.text_field :title %>
+
+Job Title:       <%= f.text_field :title %>
 Employment Type: <%= f.select :employment_type, options_for_select(@employment_type) %>
 Industry:        <%= f.select :industry, options_for_select(@industry) %>
 Location:        <%= f.text_field :location %>
@@ -12,6 +11,8 @@ Salary:          <%= f.text_field :salary %>
 Description:     <%= f.text_area :description %>
                  <%= f.submit "Update Job" %>
 <% end %>
+
+<p> Preview function missing here </p>
 
 
 
