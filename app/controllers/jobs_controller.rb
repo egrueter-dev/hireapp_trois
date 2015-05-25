@@ -12,7 +12,14 @@ class JobsController < ApplicationController
   end
 
   def create
-    Job.create(job_create_params)
+    new_job = Job.new(job_create_params)
+    if new_job.save
+      flash[:notice] = "New job created"
+      redirect_to jobs_path
+    else
+      flash[:alert]
+      render :new
+    end
   end
 
   private
