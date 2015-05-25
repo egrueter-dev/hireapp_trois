@@ -4,8 +4,14 @@ class HiresController < ApplicationController
   end
 
   def create
-    binding.pry
-    Applicant.create(hire_create_params)
+    new_applicant = Applicant.new(hire_create_params)
+    if new_applicant.save
+      flash[:notice] = "You've successfully applied"
+      redirect_to '/careers'
+    else
+      flash[:alert] = new_applicant.errors.full_messages
+      render :new
+    end
   end
 
   private
