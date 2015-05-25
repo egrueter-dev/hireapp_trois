@@ -13,6 +13,12 @@ class JobsController < ApplicationController
     @industry = Job::INDUSTRY
   end
 
+  def edit
+    @job = Job.find(params[:id])
+    @employment_type = Job::EMPLOYMENT_TYPE
+    @industry = Job::INDUSTRY
+  end
+
   def create
     new_job = Job.new(job_create_params)
     if new_job.save
