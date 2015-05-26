@@ -2,9 +2,14 @@ class JobsController < ApplicationController
   def index
     @jobs = Job.where(user_id: current_user.id)
   end
-
   def show
     @job = Job.find(job_show_params[:id].to_i)
+    @applicants = @job.applicants
+    if @applicants.count == 0
+      @applicants = "some!"
+    else
+      @applicants = "none!"
+    end
     render 'show_signed_in' if signed_in?
   end
 

@@ -24,17 +24,15 @@
   <div>
    <%= @job.date_created %>
   </div>
-
 </div>
 
 <div class="apply_for_job">
   <%= form_for :applicant, url: { action: "create", controller: "hires"}, html: {method: "POST"} do |f| %>
-    Name          <%= f.text_field :name %>
-    Email         <%= f.text_field :email %>
-    Phone         <%= f.text_field :phone %>
-     Hidden field: <%= f.hidden_field :job_id, value: @job.id %>
-
-
+  Name            <%= f.text_field :name %>
+  Email           <%= f.text_field :email %>
+  Phone           <%= f.text_field :phone %>
+  Hidden field:   <%= f.hidden_field :job_id, value: @job.id %>
+                  <%= f.file_field :resume %>
                   <%= f.submit "Apply!" %>
   <% end %>
 

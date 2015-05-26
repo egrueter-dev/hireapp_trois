@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150525203304) do
     t.string  "phone",                       null: false
     t.boolean "job_alerts?", default: false
     t.integer "job_id"
-    t.string  "applicant"
+    t.string  "resume"
   end
 
   create_table "betausers", force: :cascade do |t|

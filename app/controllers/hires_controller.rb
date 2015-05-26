@@ -17,6 +17,6 @@ class HiresController < ApplicationController
   private
 
   def hire_create_params
-    params.require(:applicant).permit(:name, :email, :phone, :job_id)
+    params.require(:applicant).permit(:name, :email, :phone, :job_id, :resume)
   end
 end
