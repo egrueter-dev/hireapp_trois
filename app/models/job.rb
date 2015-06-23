@@ -12,7 +12,7 @@ class Job < ActiveRecord::Base
     raw_date = created_at
     raw_date.strftime("%B %-d, %Y")
   end
-  
+
   def self.search(*args)
     if args[1] == ""
       @jobs = Job.title(args[0])
