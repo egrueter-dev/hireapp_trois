@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
   root 'homes#index'
   post '/', to: 'homes#create'
+
   devise_for :users
 
   resources :settings, only: [:index]
   resources :networks, only: [:index, :create]
+
+  #This is the job display for the signed in user.
   resources :jobs, only: [:index, :create, :new, :show, :edit]
 
+  #Displays public job
   resources :careers, only: [:index, :show]
 
-  #jobs needs to be updated here..
+  #Jobs needs to be updated
   #/job/12321/promote must be available..
 
   resources :dashboards, only: [:index, :create]
