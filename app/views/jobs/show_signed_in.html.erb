@@ -19,6 +19,6 @@
 <% if @applicants.count > 0 %>
       <h5> Inquiries </h5>
       <% @applicants.each do |app| %>
-        <p><a href="applicant/<%= app.id %>"><%= app.name %></p>
+        <%= link_to "#{app.name}", job_applicant_path(@job,app.id) %> <p> test </p>
       <% end %>
 <% end %>
