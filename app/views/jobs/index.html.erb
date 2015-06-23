@@ -1,5 +1,15 @@
 <%= render "layouts/internalnav" %>
+<p> this needs to be paginated </p>
+<p> toggle between open & closed jobs </p>
+
+<% @jobs.each do |job| %>
+  <p><a href="jobs/<%= job.id %>"><%= job.title %></a></p>
+<% end %>
 <div>
   <p> Add a job! </p>
   <%= button_to "New Job", new_job_path, method: "get"%>
 </div>
+
+
+
+

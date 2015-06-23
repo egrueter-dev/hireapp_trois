@@ -6,11 +6,35 @@
       <div class= "job title"><%= @job.title %></div>
     </div>
   </div>
-  <%= @job.location %>
-  <%= @job.employment_type %>
-  <%= @job.industry %>
-  <%= @job.salary %>
-  <%= @job.description %>
-  <%= @job.date_created %>
-  <p>"Job application function here"</p>
+  <div>
+    <%= @job.location %>
+  </div>
+  <div>
+    <%= @job.employment_type %>
+  </div>
+  <div>
+    <%= @job.industry %>
+  </div>
+  <div>
+    <%= @job.salary %>
+  </div>
+  <div>
+    <%= @job.description %>
+  </div>
+  <div>
+   <%= @job.date_created %>
+  </div>
 </div>
+
+<div class="apply_for_job">
+  <%= form_for :applicant, url: { action: "create", controller: "hires"}, html: {method: "POST"} do |f| %>
+  Name            <%= f.text_field :name %>
+  Email           <%= f.text_field :email %>
+  Phone           <%= f.text_field :phone %>
+  Hidden field:   <%= f.hidden_field :job_id, value: @job.id %>
+                  <%= f.file_field :resume %>
+                  <%= f.submit "Apply!" %>
+  <% end %>
+
+
+

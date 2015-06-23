@@ -1,0 +1,24 @@
+<%= render "layouts/internalnav" %>
+
+<p> Show signed in </p>
+
+<p> This is where all shit is shown </p>
+
+<p> Owner </p>
+
+<p> Location </p>
+<p> Salary/Pay Rate </p>
+<p> Inquiries </p>
+<p> You have posted this job on...</p>
+<p> View public job </p>
+<p> Job traffic sources </p>
+<p><%= link_to "Edit Job", edit_job_path %></p><br>
+
+<p> Link to promote job here:</p>
+
+<% if @applicants.count > 0 %>
+      <h5> Inquiries </h5>
+      <% @applicants.each do |app| %>
+        <%= link_to "#{app.name}", job_applicant_path(@job,app.id) %> <p> test </p>
+      <% end %>
+<% end %>
