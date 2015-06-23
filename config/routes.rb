@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   end
 
   #Displays public job
+
   resources :careers, only: [:index, :show]
+
   #
 
   #Jobs needs to be updated
