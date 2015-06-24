@@ -2,9 +2,9 @@ class JobsController < ApplicationController
   def index
     @jobs = Job.where(user_id: current_user.id)
   end
+
   def show
     @job = Job.find(job_show_params[:id].to_i)
-    binding.pry
     @applicants = @job.applicants.to_a
     if @applicants.count == 0
       @applicants
