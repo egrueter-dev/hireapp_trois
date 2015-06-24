@@ -4,6 +4,7 @@ class JobsController < ApplicationController
   end
   def show
     @job = Job.find(job_show_params[:id].to_i)
+    binding.pry
     @applicants = @job.applicants.to_a
     if @applicants.count == 0
       @applicants
