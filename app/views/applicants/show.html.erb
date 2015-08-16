@@ -1,4 +1,6 @@
-<%= @applicant.name %>
+<h2><%= @applicant.name %></h2>
 <%= @applicant.email %>
 <%= @applicant.phone %>
 
+<%= button_to "Hire", job_applicant_path, method: "put"%>
+## button for post request goes here ##
