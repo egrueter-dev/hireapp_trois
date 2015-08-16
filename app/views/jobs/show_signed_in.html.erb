@@ -18,7 +18,7 @@
 
 <p> Link to promote job here:</p>
 
-<% if @applicants.count > 0 %>
+<% if @applicants %>
       <h5> Inquiries: Paginate </h5>
       <% @applicants.each do |app| %>
         <%= link_to "#{app.name}", job_applicant_path(@job,app.id) %> <p> test </p>

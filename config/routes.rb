@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #This is the job display for the signed in user.
 
   resources :jobs, only: [:index, :create, :new, :show, :edit] do
-    resources :applicants, only: [:show]
+    resources :applicants, only: [:show, :update]
   end
 
   #Displays public job
